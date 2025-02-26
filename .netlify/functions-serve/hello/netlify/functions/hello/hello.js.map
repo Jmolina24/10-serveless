@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../../../Documents/Developer Software/Node JS/Curso Nodejs/10-serveless/netlify/functions/hello/hello.ts"],
+  "sourceRoot": "C:/Users/Jair Molina/AppData/Local/Temp/tmp-30556-bcSMjtkyVsLy",
+  "sourcesContent": ["import type { Handler } from \"@netlify/functions\";\r\n\r\nexport const handler: Handler = async (event, context) => {\r\n  return {\r\n    body: JSON.stringify({ message: \"Hello World\" }),\r\n    statusCode: 200,\r\n  }\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEO,IAAM,UAAmB,OAAO,OAAO,YAAY;AACxD,SAAO;AAAA,IACL,MAAM,KAAK,UAAU,EAAE,SAAS,cAAc,CAAC;AAAA,IAC/C,YAAY;AAAA,EACd;AACF;",
+  "names": []
+}
