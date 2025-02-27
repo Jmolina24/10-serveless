@@ -1,17 +1,18 @@
-import type { Handler } from "@netlify/functions";
+import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
-export const handler: Handler = async (event, context) => {
-
-const myImporntarVatiable = process.env.MY_IMPORTANT_VARIABLE;
-
-
-if ( !myImporntarVatiable ) {
-    throw 'Missing MY_IMPORTANT_VARIABLE';
-}
-
+const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+  
+  console.log('Hola Mundo desde Hello Handler');
 
   return {
-    body: JSON.stringify({ message: "Variables World!! " }),
     statusCode: 200,
+    body: JSON.stringify({
+      message: 'Hola Mundo!!',
+    }),
+    headers: {
+      'Content-Type':'application/json'
+    }
   }
-}
+};
+
+export { handler };

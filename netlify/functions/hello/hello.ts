@@ -1,8 +1,18 @@
-import type { Handler } from "@netlify/functions";
+import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 
-export const handler: Handler = async (event, context) => {
+const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
+  
+  console.log('Hola Mundo desde Hello Handler');
+
   return {
-    body: JSON.stringify({ message: "Hello World" }),
     statusCode: 200,
+    body: JSON.stringify({
+      message: 'Hola Mundo!!',
+    }),
+    headers: {
+      'Content-Type':'application/json'
+    }
   }
-}
+};
+
+export { handler };
